@@ -1,81 +1,54 @@
-# 🔑 Generador de Contraseñas Seguras
+# Generador de Contraseñas Seguras
 
-Este es un generador de contraseñas seguras desarrollado con **Django**. Permite crear contraseñas aleatorias según los criterios seleccionados y evalúa su nivel de seguridad.
+Este es un generador de contraseñas seguras desarrollado en Django. Permite generar contraseñas personalizadas con opciones como números, símbolos y mayúsculas, además de evaluar su nivel de seguridad.
 
----
+## 🚀 Demo
 
-## 🚀 Características
+La aplicación está desplegada en Railway y puedes probarla aquí:  
+🔗 [Generador de Contraseñas](https://web-production-c13ca.up.railway.app/)
 
-✅ Generación de contraseñas seguras con:
-- Longitud personalizable
-- Inclusión opcional de números, símbolos y mayúsculas
+## 📌 Características
+- Generación de contraseñas seguras con opciones personalizables.
+- Evaluación del nivel de seguridad de la contraseña.
+- Opción para copiar la contraseña generada.
 
-✅ Evaluación de seguridad con **zxcvbn**
-
-✅ Interfaz moderna con **Bootstrap**
-
-✅ Copiar contraseña con un solo clic
-
----
-
-## 📂 Instalación y Configuración
+## 🛠 Instalación y configuración
 
 ### 1️⃣ Clonar el repositorio
-```bash
-git clone https://github.com/tu-usuario/generador-contrasenas.git
-cd generador-contrasenas
+```sh
+git clone https://github.com/tuusuario/tu-repositorio.git
+cd tu-repositorio
 ```
 
-### 2️⃣ Crear y activar un entorno virtual
-```bash
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-```
-
-### 3️⃣ Instalar dependencias
-```bash
+### 2️⃣ Crear un entorno virtual e instalar dependencias
+```sh
+python -m venv env
+source env/bin/activate  # En Windows: env\\Scripts\\activate
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Ejecutar migraciones
-```bash
-python manage.py migrate
+### 3️⃣ Configurar Django
+Asegúrate de agregar tu dominio en `ALLOWED_HOSTS` en `settings.py` si planeas desplegarlo:
+```python
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'web-production-c13ca.up.railway.app']
 ```
 
-### 5️⃣ Iniciar el servidor
-```bash
+### 4️⃣ Ejecutar el servidor
+```sh
 python manage.py runserver
 ```
-Accede en tu navegador a: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+## 🔧 Despliegue en Railway
+1. **Subir el código a un repositorio en GitHub.**
+2. **Crear un nuevo proyecto en [Railway](https://railway.app/).**
+3. **Conectar el repositorio y configurar los ajustes:**  
+   - Agregar las variables de entorno necesarias.
+   - Definir el comando de inicio: `python manage.py migrate && gunicorn password_generator.wsgi:application`.
+4. **Desplegar la aplicación y obtener la URL generada.**
+
+## 📝 Licencia
+Este proyecto está bajo la licencia MIT.
 
 ---
 
-## 🛠 Tecnologías Usadas
-- **Django** - Framework principal
-- **Bootstrap 5** - Estilos y componentes
-- **zxcvbn** - Evaluación de seguridad de contraseñas
-
----
-
-## 📜 Endpoints
-
-| Método | URL | Descripción |
-|---------|----------------------|------------------------------|
-| GET | `/` | Página principal |
-| POST | `/` | Genera y muestra una contraseña |
-| GET | `/api/generar` | Devuelve una contraseña en JSON |
-
----
-
-## 📌 Mejoras Futuras
-- ✅ Personalización avanzada de exclusión de caracteres
-- ✅ Implementación de una API con autenticación
-- ✅ Guardado seguro de contraseñas en una base de datos
-
----
-
-## 📜 Licencia
-Este proyecto está bajo la licencia **MIT**.
-
-💻 Desarrollado por Daniel Arbelo Hernández 🚀
-
+¡Espero que este `README.md` te sea útil! 🚀
