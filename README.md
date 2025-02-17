@@ -28,7 +28,7 @@ Puedes probar el generador de contraseñas en la siguiente URL:
 
 ### 1️⃣ Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/generador-contrasenas.git
+git clone https://github.com/Daniel-Arbelo/password-generator-django.git
 cd generador-contrasenas
 ```
 
@@ -36,6 +36,7 @@ cd generador-contrasenas
 ```bash
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
 ### 3️⃣ Instalar dependencias
